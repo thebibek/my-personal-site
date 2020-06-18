@@ -56,8 +56,7 @@
                     </div>
                     <div class="col-6">
                         <ul class="about-list list-unstyled open-sans-font">
-                            <li> <span class="title">first name :</span> <span class="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">Bibek</span> </li>
-                            <li> <span class="title">last name :</span> <span class="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">Chalise</span> </li>
+                            <li> <span class="title">Name :</span> <span class="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">Bibek Chalise</span> </li>
                             <li> <span class="title">Age :</span> <span class="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">27 Years</span> </li>
                             <li> <span class="title">Nationality :</span> <span class="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">Nepalese</span> </li>
                             <li> <span class="title">Freelance :</span> <span class="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">Available</span> </li>
@@ -66,14 +65,13 @@
                     <div class="col-6">
                         <ul class="about-list list-unstyled open-sans-font">
                             <li> <span class="title">Address :</span> <span class="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">Newroad-08,</span> </li>
-                            <li> <span class="title">phone :</span> <span class="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">+21621184010</span> </li>
-                            <li> <span class="title">Email :</span> <span class="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">you@mail.com</span> </li>
-                            <li> <span class="title">Skype :</span> <span class="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">steve.milner</span> </li>
-                            <li> <span class="title">langages :</span> <span class="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">French, English</span> </li>
+                            <li> <span class="title">phone :</span> <span class="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">+977 9801064978</span> </li>
+                            <li> <span class="title">Messenger :</span> <span class="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">hellobibekchalise</span> </li>
+                            <li> <span class="title">langages :</span> <span class="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">Nepali, English, Hindi</span> </li>
                         </ul>
                     </div>
                     <div class="col-12 mt-3">
-                        <a href="about.html" class="btn btn-download">Download CV</a>
+                        <a href="contact.php" class="btn btn-download">Contact Now!!</a>
                     </div>
                 </div>
             </div>
@@ -83,26 +81,26 @@
                 <div class="row">
                     <div class="col-6">
                         <div class="box-stats with-margin">
-                            <h3 class="poppins-font position-relative">12</h3>
+                            <h3 class="poppins-font position-relative">7</h3>
                             <p class="open-sans-font m-0 position-relative text-uppercase">years of <span class="d-block">experience</span></p>
                         </div>
                     </div>
                     <div class="col-6">
                         <div class="box-stats with-margin">
-                            <h3 class="poppins-font position-relative">97</h3>
+                            <h3 class="poppins-font position-relative">65</h3>
                             <p class="open-sans-font m-0 position-relative text-uppercase">completed <span class="d-block">projects</span></p>
                         </div>
                     </div>
                     <div class="col-6">
                         <div class="box-stats">
-                            <h3 class="poppins-font position-relative">81</h3>
+                            <h3 class="poppins-font position-relative">52</h3>
                             <p class="open-sans-font m-0 position-relative text-uppercase">Happy<span class="d-block">customers</span></p>
                         </div>
                     </div>
                     <div class="col-6">
                         <div class="box-stats">
-                            <h3 class="poppins-font position-relative">53</h3>
-                            <p class="open-sans-font m-0 position-relative text-uppercase">awards <span class="d-block">won</span></p>
+                            <h3 class="poppins-font position-relative">12</h3>
+                            <p class="open-sans-font m-0 position-relative text-uppercase">Certifications <span class="d-block">Gained</span></p>
                         </div>
                     </div>
                 </div>
@@ -115,9 +113,11 @@
             <div class="col-12">
                 <h3 class="text-uppercase pb-4 pb-sm-5 mb-3 mb-sm-0 text-left text-sm-center custom-title ft-wt-600">My Skills</h3>
             </div>
+
+
             <div class="col-6 col-md-3 mb-3 mb-sm-5">
-                <div class="c100 p25">
-                    <span>25%</span>
+                <div class="c100 p97">
+                    <span>97%</span>
                     <div class="slice">
                         <div class="bar"></div>
                         <div class="fill"></div>
@@ -137,7 +137,7 @@
             </div>
             <div class="col-6 col-md-3 mb-3 mb-sm-5">
                 <div class="c100 p70">
-                    <span>70%</span>
+                    <span>85%</span>
                     <div class="slice">
                         <div class="bar"></div>
                         <div class="fill"></div>
@@ -177,7 +177,7 @@
             </div>
             <div class="col-6 col-md-3 mb-3 mb-sm-5">
                 <div class="c100 p65">
-                    <span>65%</span>
+                    <span>45%</span>
                     <div class="slice">
                         <div class="bar"></div>
                         <div class="fill"></div>
