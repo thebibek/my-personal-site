@@ -1,11 +1,47 @@
 <!DOCTYPE html>
+
+<?php 
+$page = 'contact';
+include 'config.php';
+
+if (isset($_POST['submit'])) {
+   $name = $_POST['name'];
+   $email = $_POST['email'];
+   $phone = $_POST['phone'];
+   $address = $_POST['address'];
+   $message = addslashes($_POST['message']);
+
+      $to = "enquiry@himalayannirvana.com";
+     $from = ''.$email.''; //the email address you want it from (the address does not have to exist to work)
+     $headers[] = 'MIME-Version: 1.0';
+     $headers[] = 'Content-type: text/html; charset=iso-8859-1';
+     $headers[] = "Contact Message";
+     $subject = "Contact Message";
+
+     $message1= '<html><br/>Contact Message<br/><b>Name: </b>'.$name.' <br/><b>Email:</b> '.$email.'<br/><b>Phone: </b>'.$phone.' <br/><b>Message: </b>'.$message.' <br/></html>';
+     $mail =  mail($to,$subject,$message1, implode("\r\n", $headers));
+
+   $sql = mysql_query("INSERT INTO message(name,email,phone,address,message,msg_type,curdate,curtime) VALUES('$name','$email','$phone','$address','".$message."','Contact',curdate(),curtime())") OR die(mysql_error());
+   $status3=1;
+}
+
+?>
+
+
+
 <html lang="en">
 
-
-<!-- Mirrored from slimhamdi.net/tunis/dark/contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 18 Jun 2020 09:06:25 GMT -->
 <head>
     <meta charset="utf-8">
-    <title>Contact | <?php echo $row->title; ?></title>
+         <?php
+            $sql = mysql_query("SELECT * FROM site") or die(mysql_error());
+            while($row=mysql_fetch_object($sql)){
+         ?>
+         <title>Contact | <?php print $row->title; ?></title>
+         <meta name="description" content="<?php print $row->description; ?>">
+         <meta name="keywords" content="<?php print $row->keyword; ?>">
+         <?php } ?>
+         
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Template Google Fonts -->
