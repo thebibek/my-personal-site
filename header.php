@@ -13,12 +13,12 @@
                 <h2>About</h2>
             </a>
         </li>
-        <li class="icon-box">
+       <!-- <li class="icon-box">
             <i class="fa fa-briefcase"></i>
             <a href="portfolio.php">
                 <h2>Portfolio</h2>
             </a>
-        </li>
+        </li> -->
         <li class="icon-box">
             <i class="fa fa-envelope-open"></i>
             <a href="contact.php">
@@ -43,7 +43,7 @@
             <ul class="list-unstyled" id="menu">
                 <li class="active"><a href="index.php"><i class="fa fa-home"></i><span>Home</span></a></li>
                 <li><a href="about.php"><i class="fa fa-user"></i><span>About</span></a></li>
-                <li><a href="portfolio.php"><i class="fa fa-folder-open"></i><span>Portfolio</span></a></li>
+               <!-- <li><a href="portfolio.php"><i class="fa fa-folder-open"></i><span>Portfolio</span></a></li> -->
                 <li><a href="contact.php"><i class="fa fa-envelope-open"></i><span>Contact</span></a></li>
                 <li><a href="blog.php"><i class="fa fa-comments"></i><span>Blog</span></a></li>
             </ul>
