@@ -73,7 +73,7 @@
                     <div class="post-content">
                         <div class="entry-header">
 
-                            <h3><a href="blog-post.html">How to Own Your Audience by Creating an Email List</a></h3>
+                            <h3><h2><a href="post-<?php print $row->url; ?>"><?php print $row->blog_name; } ?></a></h2></h3> 
                         </div>
                         <div class="entry-content open-sans-font">
                             <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore...
