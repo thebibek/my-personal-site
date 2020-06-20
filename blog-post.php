@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
-<!-- Mirrored from slimhamdi.net/tunis/dark/blog-post.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 18 Jun 2020 09:07:36 GMT -->
 <head>
     <meta charset="utf-8">
     <title>Blog | <?php echo $row->title; ?></title>
@@ -93,5 +91,5 @@
 </body>
 
 
-<!-- Mirrored from slimhamdi.net/tunis/dark/blog-post.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 18 Jun 2020 09:07:36 GMT -->
+
 </html>

@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
-<!-- Mirrored from slimhamdi.net/tunis/dark/portfolio.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 18 Jun 2020 09:06:06 GMT -->
 <head>
     <meta charset="utf-8">
     <title>Portfolio | <?php echo $row->title; ?></title>
@@ -429,6 +427,4 @@
 
 </body>
 
-
-<!-- Mirrored from slimhamdi.net/tunis/dark/portfolio.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 18 Jun 2020 09:06:24 GMT -->
 </html>
