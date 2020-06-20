@@ -7,11 +7,10 @@ include 'config.php';
 if (isset($_POST['submit'])) {
    $name = $_POST['name'];
    $email = $_POST['email'];
-   $phone = $_POST['phone'];
-   $address = $_POST['address'];
+   $sbuject = $_POST['subject'];
    $message = addslashes($_POST['message']);
 
-      $to = "enquiry@himalayannirvana.com";
+      $to = "kebibesilahc@gmail.com";
      $from = ''.$email.''; //the email address you want it from (the address does not have to exist to work)
      $headers[] = 'MIME-Version: 1.0';
      $headers[] = 'Content-type: text/html; charset=iso-8859-1';
@@ -21,12 +20,11 @@ if (isset($_POST['submit'])) {
      $message1= '<html><br/>Contact Message<br/><b>Name: </b>'.$name.' <br/><b>Email:</b> '.$email.'<br/><b>Phone: </b>'.$phone.' <br/><b>Message: </b>'.$message.' <br/></html>';
      $mail =  mail($to,$subject,$message1, implode("\r\n", $headers));
 
-   $sql = mysql_query("INSERT INTO message(name,email,phone,address,message,msg_type,curdate,curtime) VALUES('$name','$email','$phone','$address','".$message."','Contact',curdate(),curtime())") OR die(mysql_error());
+   $sql = mysql_query("INSERT INTO message(name,email,message,curdate,curtime) VALUES('$name','$email','$subject','".$message."','Contact',curdate(),curtime())") OR die(mysql_error());
    $status3=1;
 }
 
 ?>
-
 
 
 <html lang="en">
@@ -107,21 +105,21 @@ if (isset($_POST['submit'])) {
             <!-- Left Side Ends -->
             <!-- Contact Form Starts -->
             <div class="col-12 col-lg-8">
-                <form class="contactform" method="post" action="http://slimhamdi.net/tunis/dark/php/process-form.php">
+                <form class="contactform" method="post" action="">
                     <div class="contactform">
                         <div class="row">
                             <div class="col-12 col-md-4">
-                                <input type="text" name="name" placeholder="YOUR NAME">
+                                <input type="text" name="name" value="" id="input-name" class="form-control" placeholder="Enter your name"/>
                             </div>
                             <div class="col-12 col-md-4">
-                                <input type="email" name="email" placeholder="YOUR EMAIL">
+                                <input type="email" name="email" value="" id="input-name" class="form-control" placeholder="YOUR EMAIL">
                             </div>
                             <div class="col-12 col-md-4">
-                                <input type="text" name="subject" placeholder="YOUR SUBJECT">
+                                <input type="text" name="subject" value="" id="input-name" class="form-control" placeholder="YOUR SUBJECT">
                             </div>
                             <div class="col-12">
-                                <textarea name="message" placeholder="YOUR MESSAGE"></textarea>
-                                <button type="submit" class="btn btn-contact">Send Message</button>
+                                <textarea name="message" id="input-enquiry" class="form-control" placeholder="YOUR MESSAGE"></textarea>
+                                <button type="submit" name="submit" class="btn btn-contact">Send Message</button>
                             </div>
                             <div class="col-12 form-message">
                                 <span class="output_message text-center font-weight-600 text-uppercase"></span>

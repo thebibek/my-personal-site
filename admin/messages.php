@@ -5,11 +5,11 @@ include 'all_functions.php';
 $page = 'index';
 if (isset($_GET['del'])) {
     $id = $_GET['del'];
-    $to_delete = mysql_query("SELECT * FROM messages WHERE id='$id' ") or die(mysql_error());
+    $to_delete = mysql_query("SELECT * FROM message WHERE id='$id' ") or die(mysql_error());
     $row = mysql_fetch_object($to_delete);
     $name = $row->name;
 
-    $delete = mysql_query("DELETE FROM messages WHERE id = $id") or die(mysql_error());
+    $delete = mysql_query("DELETE FROM message WHERE id = $id") or die(mysql_error());
     if ($delete) {
         store_log($user_id, $user_fullname.' deleted message of  '.$name);
     }
@@ -100,7 +100,7 @@ if (isset($_GET['del'])) {
                                                 <tbody>
                                                     <?php
                                                         $i =1;
-                                                        $sql = mysql_query("SELECT * FROM message WHERE msg_type='Contact' ORDER BY id DESC ") or die(mysql_error());
+                                                        $sql = mysql_query("SELECT * FROM message ORDER BY id DESC ") or die(mysql_error());
                                                         while ($row = mysql_fetch_object($sql)) {
                                                     ?>
                                                         <tr class="grade">
