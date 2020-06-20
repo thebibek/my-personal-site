@@ -4,9 +4,18 @@
 
 
 <head>
-    <meta charset="utf-8">
-    <title>About | <?php echo $row->title; ?></title>
+<meta charset="utf-8">
+         <?php
+            $sql = mysql_query("SELECT * FROM site") or die(mysql_error());
+            while($row=mysql_fetch_object($sql)){
+         ?>
+         <title>About | <?php print $row->title; ?></title>
+         <meta name="description" content="<?php print $row->description; ?>">
+         <meta name="keywords" content="<?php print $row->keyword; ?>">
+         <?php } ?>
+         
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
 
     <!-- Template Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
