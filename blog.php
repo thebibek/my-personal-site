@@ -1,11 +1,21 @@
-﻿<!DOCTYPE html>
+﻿<?php
+    include('config.php')
+
+<!DOCTYPE html>
 <html lang="en">
 
 
 
 <head>
     <meta charset="utf-8">
-    <title>Blog | <?php echo $row->title; ?></title>
+    <?php
+            $sql = mysql_query("SELECT * FROM site") or die(mysql_error());
+            while($row=mysql_fetch_object($sql)){
+         ?>
+         <title>Blog| <?php print $row->title; ?></title>
+         <meta name="description" content="<?php print $row->des; ?>">
+         <meta name="keywords" content="<?php print $row->keyword; ?>">
+         <?php } ?>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Template Google Fonts -->
