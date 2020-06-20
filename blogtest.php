@@ -61,12 +61,18 @@
             <div class="col-12 col-md-6 col-lg-6 col-xl-4 mb-30">
                 <article class="post-container">
                     <div class="post-thumb">
+                        <?php
+                            $sql = mysql_query("SELECT * FROM blog ORDER BY blog_id DESC LIMIT 8") or die(mysql_error());
+                            while ($row = mysql_fetch_object($sql)) {
+                        ?>
+
                         <a href="blog-post.html" class="d-block position-relative overflow-hidden">
-                            <img src="img/blog/blog-post-1.jpg" class="img-fluid" alt="Blog Post">
+                              <img src="img/blog/<?php print $row->image; ?>" alt="<?php print $row->blog_name; ?>">
                         </a>
                     </div>
                     <div class="post-content">
                         <div class="entry-header">
+
                             <h3><a href="blog-post.html">How to Own Your Audience by Creating an Email List</a></h3>
                         </div>
                         <div class="entry-content open-sans-font">
