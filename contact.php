@@ -38,7 +38,7 @@ if (isset($_POST['submit'])) {
             while($row=mysql_fetch_object($sql)){
          ?>
          <title>Contact | <?php print $row->title; ?></title>
-         <meta name="description" content="<?php print $row->description; ?>">
+         <meta name="description" content="<?php print $row->des; ?>">
          <meta name="keywords" content="<?php print $row->keyword; ?>">
          <?php } ?>
          
