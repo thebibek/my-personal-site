@@ -6,19 +6,18 @@
 <html lang="en">
 
 <head>
-     <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <!-- SEO TAGS -->
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
         <?php
-            $sql = "SELECT * FROM site"; 
-            $query = mysql_query($sql);
-            while($row = mysql_fetch_object($query));
-        ?>
-
-    <title>Home | <?php echo $row->title; ?></title>
+            $sql = mysql_query("SELECT * FROM site") or die(mysql_error());
+            while($row=mysql_fetch_object($sql)){
+         ?>
+         <title>Home | <?php print $row->title; ?></title>
+         <meta name="description" content="<?php print $row->des; ?>">
+         <meta name="keywords" content="<?php print $row->keyword; ?>">
+         <?php } ?>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Template Google Fonts -->
