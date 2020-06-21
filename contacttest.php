@@ -1,30 +1,37 @@
 <!DOCTYPE html>
 
-<?php 
-$page = 'contact';
-include 'config.php';
-
-if (isset($_POST['submit'])) {
-   $name = $_POST['name'];
-   $email = $_POST['email'];
-   $sbuject = $_POST['subject'];
-   $message = addslashes($_POST['message']);
-
-      $to = "kebibesilahc@gmail.com";
-     $from = ''.$email.''; //the email address you want it from (the address does not have to exist to work)
-     $headers[] = 'MIME-Version: 1.0';
-     $headers[] = 'Content-type: text/html; charset=iso-8859-1';
-     $headers[] = "Contact Message";
-     $subject = "Contact Message";
-
-     $message1= '<html><br/>Contact Message<br/><b>Name: </b>'.$name.' <br/><b>Email:</b> '.$email.'<br/><b>Subject: </b>'.$subject.' <br/><b>Message: </b>'.$message.' <br/></html>';
-     $mail =  mail($to,$subject,$message1, implode("\r\n", $headers));
-
-   $sql = mysql_query("INSERT INTO message(name,email,subject,message) VALUES('$name','$email','$subject','".$message."')") OR die(mysql_error());
-   $status3=1;
-}
-
+<?php
+  include('config.php')
 ?>
+
+<?php
+if (isset($_POST['submit'])) {
+                $name = $_POST['name'];
+                $email = $_POST['email'];
+                $sbuject = $_POST['subject'];
+                $message = addslashes($_POST['message']);
+
+                $sql = mysql_query("INSERT INTO message(name,email,subject,message,curdate,curtime) VALUES('$name','$email','$subject','".$message."',curdate(),curtime())") OR die(mysql_error());
+
+                if($sql){
+                    $susMessage='true';
+                }
+                else{
+                    $susError='true';
+                }
+            }
+?>
+ <?php 
+                if (isset($susMessage)) {
+            ?>
+                <span style="color: green;">Thank You !! We will get back you Soon</span>
+            <?php } ?>
+
+            <?php 
+                if (isset($susError)) {
+            ?>
+                <span style="color: red;">Sorry !! Something is Wrong</span>
+            <?php } ?>
 
 
 <html lang="en">
