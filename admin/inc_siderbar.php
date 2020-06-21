@@ -1,6 +1,4 @@
 
-application/x-httpd-php inc_siderbar.php ( HTML document, ASCII text )
-
         <div class="side-menu-area">
 
             <div class="logo-bar">
