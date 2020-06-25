@@ -59,26 +59,25 @@
         <div class="row">
             <!-- Article Starts -->
             <div class="col-12 col-md-6 col-lg-6 col-xl-4 mb-30">
-                <article class="post-container">
-                    <div class="post-thumb">
-                        <?php
+                    <?php
                             $sql = mysql_query("SELECT * FROM blog ORDER BY blog_id DESC LIMIT 8") or die(mysql_error());
                             while ($row = mysql_fetch_object($sql)) {
                         ?>
 
-                        <a href="blog-post.html" class="d-block position-relative overflow-hidden">
-                              <img src="img/blog/<?php print $row->image; ?>" alt="<?php print $row->blog_name; ?>">
+
+                <article class="post-container">
+                    <div class="post-thumb">
+                        <a href="post-<?php print $row->url; ?>" class="post-thumb">
+                              <img src="img/blog/<?php print $row->image; ?>" alt="<?php print $row->blog_name; ?>" class="img-fluid">
                         </a>
                     </div>
                     <div class="post-content">
                         <div class="entry-header">
-
-                            <h3><h2><a href="post-<?php print $row->url; ?>"><?php print $row->blog_name; } ?></a></h2></h3> 
+                                 <div class="entry-content open-sans-font">
+                            <h3><h2><a href="post-<?php print $row->url; ?>"> <?php print $row->blog_name; } ?></a></h2></h3> 
                         </div>
-                        <div class="entry-content open-sans-font">
-                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore...
-                            </p>
-                        </div>
+                       
+                              </div>
                     </div>
                 </article>
             </div>
