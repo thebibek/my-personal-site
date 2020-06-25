@@ -1,4 +1,4 @@
-﻿﻿<?php
+﻿<?php
     include('config.php');
 ?>
 
@@ -54,30 +54,38 @@
 <!-- Main Content Starts -->
 <section class="main-content revealator-slideup revealator-once revealator-delay1">
     <div class="container">
+       
         <!-- Articles Starts -->
         <div class="row">
             <!-- Article Starts -->
+            <?php
+                $sql = mysql_query("SELECT * FROM blog ORDER BY blog_id DESC LIMIT 8") or die(mysql_error());
+                while ($row = mysql_fetch_object($sql)) //
+                { 
+            ?>
+
             <div class="col-12 col-md-6 col-lg-6 col-xl-4 mb-30">
                 <article class="post-container">
                     <div class="post-thumb">
-                        <a href="blog-post.html" class="d-block position-relative overflow-hidden">
-                            <img src="img/blog/blog-post-1.jpg" class="img-fluid" alt="Blog Post">
-                        </a>
+                        <a href="post-<?php print $row->url; ?>" class="post-thumb">
+                              <img src="img/blog/<?php print $row->image; ?>" alt="<?php print $row->blog_name; ?>" class="img-fluid">
+                      </a>
                     </div>
                     <div class="post-content">
                         <div class="entry-header">
-                            <h3><a href="blog-post.html">How to Own Your Audience by Creating an Email List</a></h3>
+                            <h3><a href="post-<?php print $row->url; ?>"> <?php print $row->blog_name;  ?></a></h3> 
                         </div>
-                        <div class="entry-content open-sans-font">
+                         <div class="entry-content open-sans-font">
                             <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore...
                             </p>
                         </div>
                     </div>
                 </article>
             </div>
+        <?php   } ?>
             <!-- Article Ends -->
             <!-- Article Starts -->
-            <div class="col-12 col-md-6 col-lg-6 col-xl-4 mb-30">
+           <!--  <div class="col-12 col-md-6 col-lg-6 col-xl-4 mb-30">
                 <article class="post-container">
                     <div class="post-thumb">
                         <a href="blog-post.html" class="d-block position-relative overflow-hidden">
@@ -94,10 +102,10 @@
                         </div>
                     </div>
                 </article>
-            </div>
+            </div> -->
             <!-- Article Ends -->
             <!-- Article Starts -->
-            <div class="col-12 col-md-6 col-lg-6 col-xl-4 mb-30">
+            <!-- <div class="col-12 col-md-6 col-lg-6 col-xl-4 mb-30">
                 <article class="post-container">
                     <div class="post-thumb">
                         <a href="blog-post.html" class="d-block position-relative overflow-hidden">
@@ -114,10 +122,10 @@
                         </div>
                     </div>
                 </article>
-            </div>
+            </div> -->
             <!-- Article Ends -->
             <!-- Article Starts -->
-            <div class="col-12 col-md-6 col-lg-6 col-xl-4 mb-30">
+            <!-- <div class="col-12 col-md-6 col-lg-6 col-xl-4 mb-30">
                 <article class="post-container">
                     <div class="post-thumb">
                         <a href="blog-post.html" class="d-block position-relative overflow-hidden">
@@ -134,10 +142,10 @@
                         </div>
                     </div>
                 </article>
-            </div>
+            </div> -->
             <!-- Article Ends -->
             <!-- Article Starts -->
-            <div class="col-12 col-md-6 col-lg-6 col-xl-4 mb-30">
+            <!-- <div class="col-12 col-md-6 col-lg-6 col-xl-4 mb-30">
                 <article class="post-container">
                     <div class="post-thumb">
                         <a href="blog-post.html" class="d-block position-relative overflow-hidden">
@@ -154,10 +162,10 @@
                         </div>
                     </div>
                 </article>
-            </div>
+            </div> -->
             <!-- Article Ends -->
             <!-- Article Starts -->
-            <div class="col-12 col-md-6 col-lg-6 col-xl-4 mb-30">
+            <!-- <div class="col-12 col-md-6 col-lg-6 col-xl-4 mb-30">
                 <article class="post-container">
                     <div class="post-thumb">
                         <a href="blog-post.html" class="d-block position-relative overflow-hidden">
@@ -174,7 +182,7 @@
                         </div>
                     </div>
                 </article>
-            </div>
+            </div> -->
             <!-- Article Ends -->
             <!-- Pagination Starts -->
             <div class="col-12 mt-4">
